@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiet Things // [DS] — DivyaShree</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=JetBrains+Mono:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#070b14",
+          "background": "#0a0f1d",
+          "surface": "#0a0f1d",
+          "surface-container-lowest": "#050811",
+          "surface-container-low": "#0d1527",
+          "surface-container": "#10172a",
+          "surface-container-high": "#162038",
+          "surface-container-highest": "#1e2b48",
+          "on-background": "#f1f5f9",
+          "on-surface": "#e2e8f0",
+          "on-surface-variant": "#94a3b8",
+          "outline": "#64748b",
+          "outline-variant": "#1e293b",
+          "primary": "#cbd5e1",
+          "secondary": "#93c5fd",
+          "secondary-container": "#1e2b48",
+          "secondary-fixed": "#93c5fd"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": ["Playfair Display"],
+          "body-reading": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "headline-lg": ["Playfair Display"],
+          "body-ui": ["Inter"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "label-sm": ["JetBrains Mono"],
+          "body-sm": ["Inter"],
+          "display-lg": ["Playfair Display"],
+          "label-md": ["JetBrains Mono"],
+          "headline-sm": ["Playfair Display"],
+          "mono": ["JetBrains Mono", "monospace"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+    body {
+      background-color: #0a0f1d !important;
+      color: #e2e8f0;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 3.8rem;
+      line-height: 0.82;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      font-family: 'Playfair Display', serif;
+      color: #f1f5f9;
+    }
+    .author-editable-highlight {
+      outline: 1px dashed rgba(147, 197, 253, 0.4);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f1d] text-[#e2e8f0] font-body-ui antialiased selection:bg-[#1e293b] selection:text-white min-h-screen flex flex-col justify-between">
+<!-- ========================================== -->
+<!-- SCREEN 1: LANDING & PUBLIC ARCHIVE         -->
+<!-- ========================================== -->
+<div class="transition-opacity duration-300" id="screen-landing">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#0a0f1d] text-[#e2e8f0] overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-12 md:px-24 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Shared Header Element -->
+<header class="relative flex items-center justify-between whitespace-nowrap border-b border-[#1e293b] px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-[#f1f5f9]">
+<div class="size-4 text-[#93c5fd]">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#f1f5f9] text-lg font-bold leading-tight font-headline-sm tracking-[-0.01em]">Anthems of Heart</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9 font-body-ui">
+<a class="text-[#cbd5e1] hover:text-[#f8fafc] transition-colors text-sm font-medium leading-normal" href="#">Essays</a>
+<a class="text-[#cbd5e1] hover:text-[#f8fafc] transition-colors text-sm font-medium leading-normal" href="#">Fragments</a>
+<a class="text-[#cbd5e1] hover:text-[#f8fafc] transition-colors text-sm font-medium leading-normal" href="#">Archive</a>
+<a class="text-[#cbd5e1] hover:text-[#f8fafc] transition-colors text-sm font-medium leading-normal" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#1e293b] hover:bg-[#334155] text-[#e2e8f0] text-sm font-medium border border-[#334155] leading-normal tracking-[0.015em] transition-colors" onclick="openVerificationModal()">
+<span class="truncate">Subscribe</span>
+</button>
+<!-- Interactive Author Profile Avatar Component -->
+<div class="relative" id="author-menu-container">
+<button aria-expanded="false" aria-haspopup="true" class="group flex items-center gap-1.5 p-1 rounded-full border border-[#334155] hover:border-[#93c5fd]/70 bg-[#10172a] hover:bg-[#162038] transition-all focus:outline-none focus:ring-2 focus:ring-[#93c5fd]/50" id="author-avatar-btn" onclick="toggleAuthorDropdown(event)" type="button">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 md:size-9" data-alt="Intimate film-still portrait of DivyaShree in moody low-light profile against dark charcoal concrete, soft rim lighting accentuating subtle textures, cinematic minimalist atmosphere matching a refined dark aesthetic with quiet introspective depth." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5tdISrKVKtddR3O-tL4Wz5srTtP4EQvqhRcK0lBLfW9TFsPdjPpvLsTQTUlXAvmyhaC-Pn9_m2WLSE-ooOwmYG8UfWv6QCxx6me_IBXtrtFMXkVSppREjUESHmCLLBHedToGvN9Jix8SJZReFy9sAevFy6FfhC4_0Rq2fnR535wC0ss34HU9G0rWPKVVHHVy0rBIpiae_IvMjfwaORBkpDoTqgOcxJARNVZEtsDBIh1kOsxXKN0Xt')"></div>
+<span class="absolute bottom-0 right-0 size-2.5 rounded-full bg-emerald-400 ring-2 ring-[#0a0f1d]" title="Author session active"></span>
+</div>
+<span class="material-symbols-outlined text-xs text-[#94a3b8] group-hover:text-[#93c5fd] transition-transform duration-200 group-aria-expanded:rotate-180 pr-1" data-icon="expand_more">expand_more</span>
+</button>
+<!-- Author Access Dropdown Menu -->
+<div class="absolute right-0 top-12 w-80 sm:w-96 rounded-xl bg-[#0d1527] border border-[#253556] shadow-2xl p-4 text-[#e2e8f0] z-50 backdrop-blur-xl hidden transition-all duration-200 origin-top-right" id="author-dropdown-menu">
+<!-- Header with author info -->
+<div class="flex items-center gap-3 pb-3.5 border-b border-[#1e293b]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-11 border border-[#334155] shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5tdISrKVKtddR3O-tL4Wz5srTtP4EQvqhRcK0lBLfW9TFsPdjPpvLsTQTUlXAvmyhaC-Pn9_m2WLSE-ooOwmYG8UfWv6QCxx6me_IBXtrtFMXkVSppREjUESHmCLLBHedToGvN9Jix8SJZReFy9sAevFy6FfhC4_0Rq2fnR535wC0ss34HU9G0rWPKVVHHVy0rBIpiae_IvMjfwaORBkpDoTqgOcxJARNVZEtsDBIh1kOsxXKN0Xt')"></div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<p class="text-sm font-semibold text-[#f1f5f9] truncate">DivyaShree</p>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-mono uppercase bg-[#1e2b48] text-[#93c5fd] border border-[#2e406b]">Author</span>
+</div>
+<p class="text-xs text-[#94a3b8] font-mono truncate">Editor &amp; Curator Session</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-block size-1.5 rounded-full bg-emerald-400"></span>
+<span class="text-[11px] text-emerald-300 font-label-md">Signed in as DivyaShree</span>
+</div>
+</div>
+</div>
+<!-- Author Quick Actions -->
+<div class="py-3 space-y-1.5">
+<!-- Write New Post Button -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-[#1e293b] hover:bg-[#253556] text-[#f1f5f9] transition-all text-left group" onclick="openComposerModal()">
+<span class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-[#93c5fd] text-lg">edit_square</span>
+<span>+ Write New Essay / Draft</span>
+</span>
+<span class="text-[11px] font-mono text-[#94a3b8] group-hover:text-[#93c5fd]">Composer →</span>
+</button>
+<!-- Toggle Inline Editing Mode -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-[#10172a] hover:bg-[#162038] text-[#cbd5e1] hover:text-[#f1f5f9] transition-all text-left border border-[#1e293b]" id="btn-toggle-editmode" onclick="toggleAuthorEditMode()">
+<span class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-[#94a3b8] text-lg" id="editmode-icon">edit_note</span>
+<span id="editmode-label">Enable Inline Editing Mode</span>
+</span>
+<span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#162038] text-[#94a3b8]" id="editmode-badge">OFF</span>
+</button>
+<!-- Edit About & Colophon -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-[#10172a] hover:bg-[#162038] text-[#cbd5e1] hover:text-[#f1f5f9] transition-all text-left border border-[#1e293b]" onclick="openBioEditorModal()">
+<span class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-[#94a3b8] text-lg">person_edit</span>
+<span>Edit About &amp; Colophon</span>
+</span>
+<span class="text-xs text-[#64748b] font-mono">Bio notes</span>
+</button>
+<!-- Archive & Draft Vault Manager -->
+<button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-[#10172a] hover:bg-[#162038] text-[#cbd5e1] hover:text-[#f1f5f9] transition-all text-left border border-[#1e293b]" onclick="openVaultManager()">
+<span class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-[#93c5fd] text-lg">folder_special</span>
+<span>Archive &amp; Draft Vault</span>
+</span>
+<span class="text-[11px] font-mono text-[#93c5fd]">6 drafts</span>
+</button>
+</div>
+<!-- Dropdown Footer / Quick Session Toggle -->
+<div class="pt-2.5 border-t border-[#1e293b] flex items-center justify-between text-xs text-[#94a3b8] font-mono">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#64748b]">lock_person</span>
+<span>Curator Key: Valid</span>
+</span>
+<button class="hover:text-[#f1f5f9] underline decoration-[#334155] underline-offset-2 transition-colors" onclick="toggleAuthorSessionStatus()">
+        Lock Session
+      </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Intro Section -->
+<div class="flex flex-wrap justify-between items-start gap-4 p-4 pt-8">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-[#f1f5f9] text-3xl md:text-4xl font-normal leading-tight font-display-lg-mobile md:font-display-lg tracking-[-0.02em]"></p><h2 class="text-[#f1f5f9] text-lg font-bold leading-tight font-headline-sm tracking-[-0.01em]" id="header-site-title">Anthems of Heart</h2><p class=""></p>
+<p class="text-[#94a3b8] text-base font-normal leading-normal" id="author-subtitle">Poems, fragments &amp; observations by DivyaShree</p>
+</div>
+</div>
+<p class="text-[#cbd5e1] font-body-reading text-base md:text-[17px] font-light leading-relaxed pb-3 pt-2 px-4 max-w-2xl" id="author-bio-paragraph">
+              Notes on memory, the architecture of silence, and private truths written at 3 AM. A repository of published essays and unpolished drafts.
+            </p>
+<div class="flex items-center gap-2 text-[#64748b] font-label-md text-xs tracking-wider uppercase pb-6 pt-1 px-4">
+<span id="issue-badge">Issue No. 42</span>
+<span class="">•</span>
+<span class="">Bangalore / Remote</span>
+<span class="">•</span>
+<span class="">8.4k Readers</span>
+<span class="author-edit-slot hidden ml-2">
+<button class="text-[11px] text-[#93c5fd] hover:underline flex items-center gap-1 font-mono" onclick="openBioEditorModal()">
+<span class="material-symbols-outlined text-sm">edit</span> Edit intro
+  </button>
+</span>
+</div>
+<!-- Inline Editing Mode Active Banner -->
+<div class="hidden mx-4 mb-4 p-3 rounded-lg bg-[#162038] border border-[#2e406b] flex items-center justify-between text-xs font-mono text-[#cbd5e1]" id="editing-mode-banner">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-[#93c5fd] animate-pulse"></span>
+<span class="text-[#f1f5f9] font-medium">Author Inline Editing Active:</span>
+<span class="text-[#94a3b8]">Click inline edit buttons or post titles to revise manuscript copy.</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-[#253556] text-[#93c5fd] border border-[#334155] transition-colors" onclick="openComposerModal()">+ New Draft</button>
+<button class="px-2 py-1 text-[#94a3b8] hover:text-[#f1f5f9]" onclick="toggleAuthorEditMode()">Exit</button>
+</div>
+</div>
+<!-- Writings Feed -->
+<div class="px-4 pb-12">
+<div class="flex items-center justify-between border-b border-[#1e293b] pb-3 mb-6">
+<h3 class="text-[#f1f5f9] text-lg font-bold leading-tight font-headline-sm tracking-[-0.015em]">Selected Writings</h3>
+<div class="flex items-center gap-3">
+<button class="text-xs text-[#93c5fd] hover:text-white font-mono flex items-center gap-1 bg-[#10172a] hover:bg-[#162038] px-2.5 py-1 rounded border border-[#1e293b] transition-colors" onclick="openComposerModal()">
+<span class="material-symbols-outlined text-sm">add</span> Draft Post
+  </button>
+<span class="text-xs text-[#64748b] font-label-md" id="entry-count-badge">3 Entries Available</span>
+</div>
+</div>
+<div class="flex flex-col gap-5" id="essays-feed-container">
+<!-- Card 1 -->
+<article class="relative border border-[#1e293b] bg-[#10172a] hover:border-[#334155] hover:bg-[#141d33] transition-all rounded-lg p-6 group" id="card-essay-1">
+<div class="flex items-center justify-between gap-4 mb-2">
+<span class="text-xs font-label-md uppercase tracking-wider text-[#64748b]">Essay 01 • 6 min read</span>
+<div class="flex items-center gap-2">
+<span class="text-xs text-[#64748b] font-mono">Nov 14</span>
+<button class="author-edit-slot hidden text-[#94a3b8] hover:text-[#93c5fd] p-1 rounded hover:bg-[#1e293b] transition-colors" onclick="triggerQuickEdit('card-essay-1', 'On the Art of Disappearing', 'On stepping back from the digital rush and finding clarity in stillness. When the noise reaches peak resonance, voluntary absence becomes the only genuine form of articulation left.')" title="Edit this essay">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+</div>
+<h4 class="text-xl md:text-2xl font-headline-sm text-[#f1f5f9] font-normal group-hover:text-[#93c5fd] transition-colors mb-2 tracking-[-0.015em]" id="title-card-essay-1">
+                    On the Art of Disappearing
+                  </h4>
+<p class="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-4" id="desc-card-essay-1">
+                    On stepping back from the digital rush and finding clarity in stillness. When the noise reaches peak resonance, voluntary absence becomes the only genuine form of articulation left.
+                  </p>
+<div class="flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-[#e2e8f0] hover:text-[#93c5fd] transition-colors" href="#essay-1" onclick="alert('Viewing archived public essay: On the Art of Disappearing')">
+<span class="">Read Essay</span>
+<span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+<span class="author-edit-slot hidden text-xs font-mono text-[#64748b] bg-[#162038] px-2 py-0.5 rounded border border-[#1e293b]">Public</span>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="relative border border-[#1e293b] bg-[#10172a] hover:border-[#334155] hover:bg-[#141d33] transition-all rounded-lg p-6 group" id="card-essay-2">
+<div class="flex items-center justify-between gap-4 mb-2">
+<span class="text-xs font-label-md uppercase tracking-wider text-[#64748b]">Essay 02 • 8 min read</span>
+<div class="flex items-center gap-2">
+<span class="text-xs text-[#64748b] font-mono">Oct 29</span>
+<button class="author-edit-slot hidden text-[#94a3b8] hover:text-[#93c5fd] p-1 rounded hover:bg-[#1e293b] transition-colors" onclick="triggerQuickEdit('card-essay-2', 'Blue Light &amp; Timestamps', 'Late-night communications, sent receipts, and digital ghosts. The phantom reassurance of an active green dot across an ocean when everyone else has ceased speaking.')" title="Edit this essay">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+</div>
+<h4 class="text-xl md:text-2xl font-headline-sm text-[#f1f5f9] font-normal group-hover:text-[#93c5fd] transition-colors mb-2 tracking-[-0.015em]" id="title-card-essay-2">
+                    Blue Light &amp; Timestamps
+                  </h4>
+<p class="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-4" id="desc-card-essay-2">
+                    Late-night communications, sent receipts, and digital ghosts. The phantom reassurance of an active green dot across an ocean when everyone else has ceased speaking.
+                  </p>
+<div class="flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-[#e2e8f0] hover:text-[#93c5fd] transition-colors" href="#essay-2" onclick="alert('Viewing archived public essay: Blue Light &amp; Timestamps')">
+<span class="">Read Essay</span>
+<span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+<span class="author-edit-slot hidden text-xs font-mono text-[#64748b] bg-[#162038] px-2 py-0.5 rounded border border-[#1e293b]">Public</span>
+</div>
+</article>
+<!-- Card 3: Locked Entry -->
+<article class="relative overflow-hidden border border-[#253556] bg-[#0d1527] hover:border-[#3b82f6]/60 transition-all rounded-lg p-6 cursor-pointer group shadow-xl shadow-[#050811]" id="card-essay-3" onclick="handleRestrictedClick(event)">
+<div class="absolute -right-8 -top-8 w-36 h-36 bg-[#1d4ed8]/10 rounded-full blur-2xl group-hover:bg-[#1d4ed8]/20 transition-colors pointer-events-none"></div>
+<div class="flex items-center justify-between gap-4 mb-2.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[11px] font-label-md tracking-wider font-semibold uppercase bg-[#1e2b48] text-[#93c5fd] border border-[#2e406b]">
+<svg class="size-3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect>
+<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+</svg>
+                        Subscribers Only
+                      </span>
+<span class="text-xs font-label-md uppercase tracking-wider text-[#64748b]">Vault Draft #19</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-[#64748b] font-label-md">Encrypted</span>
+<button class="author-edit-slot hidden text-[#94a3b8] hover:text-[#93c5fd] p-1 rounded hover:bg-[#1e293b] transition-colors" onclick="event.stopPropagation(); triggerQuickEdit('card-essay-3', 'For the ones who stayed in the dark (Archived Drafts)', 'An unredacted personal archive detailing private reflections, navigating public rumors, and the quiet dignity of starting over.')" title="Edit this locked entry">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+</div>
+<h4 class="text-xl md:text-2xl font-headline-sm text-[#f1f5f9] font-normal group-hover:text-[#93c5fd] transition-colors flex items-center gap-2 mb-2 tracking-[-0.015em]" id="title-card-essay-3">
+<span class="">For the ones who stayed in the dark (Archived Drafts)</span>
+</h4>
+<p class="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-5" id="desc-card-essay-3">
+                    An unredacted personal archive detailing private reflections, navigating public rumors, and the quiet dignity of starting over.
+                  </p>
+<div class="flex items-center justify-between pt-2 border-t border-[#1e293b]">
+<span class="text-xs text-[#64748b] font-label-md">Estimated reading: 12 min</span>
+<span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide text-[#93c5fd] group-hover:translate-x-0.5 transition-all">
+<span class="">Unlock Archive</span>
+<svg class="size-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</span>
+</div>
+</article>
+</div>
+</div>
+<!-- Footer -->
+<footer class="border-t border-[#1e293b] py-8 px-4 text-xs text-[#64748b] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono">
+<p class="">© 2024 DivyaShree. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<a class="hover:text-[#e2e8f0] transition-colors" href="#" onclick="openBioEditorModal(); return false;">Colophon</a>
+<span class="">/</span>
+<a class="hover:text-[#e2e8f0] transition-colors" href="#">Privacy Note</a>
+<span class="">/</span>
+<a class="hover:text-[#e2e8f0] transition-colors" href="#" onclick="openVaultManager(); return false;">Index</a>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- AUTHOR DRAWER / COMPOSER MODAL             -->
+<!-- ========================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#070b14]/85 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none" id="screen-composer-modal">
+<div class="relative w-full max-w-2xl bg-[#0d1527] border border-[#253556] shadow-2xl p-6 sm:p-8 rounded-xl text-[#e2e8f0] overflow-hidden">
+<div class="flex items-center justify-between pb-4 border-b border-[#1e293b] mb-5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#93c5fd]">stylus_note</span>
+<div>
+<h3 class="text-lg font-headline-sm text-[#f1f5f9] font-medium" id="composer-modal-title">Write New Manuscript Draft</h3>
+<p class="text-xs text-[#94a3b8] font-mono">Author curation desk • Autosaved locally</p>
+</div>
+</div>
+<button class="text-[#94a3b8] hover:text-[#f1f5f9] p-1.5 rounded-lg hover:bg-[#1e293b]" onclick="closeComposerModal()">
+<svg class="size-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path>
+</svg>
+</button>
+</div>
+<form class="space-y-4" id="composer-form" onsubmit="handlePublishDraft(event)">
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1">Title</label>
+<input class="w-full bg-[#10172a] border border-[#1e293b] focus:border-[#93c5fd] rounded-lg px-3.5 py-2.5 text-sm text-[#f1f5f9] focus:outline-none" id="composer-title-input" placeholder="e.g., The Architecture of Unspoken Thoughts" required=""/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1">Type / Category</label>
+<select class="w-full bg-[#10172a] border border-[#1e293b] focus:border-[#93c5fd] rounded-lg px-3 py-2 text-sm text-[#cbd5e1] focus:outline-none" id="composer-type-input">
+<option value="Essay">Essay</option>
+<option value="Fragment">Fragment</option>
+<option value="Private Journal">Private Journal</option>
+<option value="Vault Draft">Vault Draft</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1">Estimated Reading Time</label>
+<input class="w-full bg-[#10172a] border border-[#1e293b] focus:border-[#93c5fd] rounded-lg px-3 py-2 text-sm text-[#f1f5f9] focus:outline-none" id="composer-readtime-input" value="5 min read"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1">Synopsis / Lead</label>
+<textarea class="w-full bg-[#10172a] border border-[#1e293b] focus:border-[#93c5fd] rounded-lg p-3 text-sm text-[#cbd5e1] focus:outline-none" id="composer-synopsis-input" placeholder="A brief contemplative summary for the archive reader..." required="" rows="2"></textarea>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1">Manuscript Body (Markdown / Freeform)</label>
+<textarea class="w-full bg-[#10172a] border border-[#1e293b] focus:border-[#93c5fd] rounded-lg p-3 text-sm text-[#cbd5e1] focus:outline-none font-body-reading" id="composer-body-input" placeholder="Begin writing at 3 AM..." rows="5"></textarea>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-[#1e293b]">
+<div class="flex items-center gap-2">
+<input class="rounded bg-[#10172a] border-[#1e293b] text-[#93c5fd] focus:ring-0" id="composer-subscribers-only" type="checkbox"/>
+<label class="text-xs text-[#94a3b8] font-mono cursor-pointer" for="composer-subscribers-only">Restrict to verified subscribers only</label>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider text-[#94a3b8] hover:text-[#f1f5f9] hover:bg-[#10172a] transition-colors" onclick="closeComposerModal()" type="button">Discard</button>
+<button class="px-5 py-2 rounded-lg bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#0a0f1d] font-semibold text-xs font-mono uppercase tracking-wider transition-colors shadow-md shadow-[#93c5fd]/20" type="submit">Publish to Feed</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- AUTHOR BIO / COLOPHON EDITOR MODAL         -->
+<!-- ========================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#070b14]/85 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none" id="screen-bio-modal">
+<div class="relative w-full max-w-lg bg-[#0d1527] border border-[#253556] shadow-2xl p-6 rounded-xl text-[#e2e8f0]">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e293b] mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#93c5fd]">edit_document</span>
+<h3 class="text-base font-headline-sm text-[#f1f5f9] font-medium">Edit About &amp; Header Colophon</h3>
+</div>
+<button class="text-[#94a3b8] hover:text-[#f1f5f9]" onclick="closeBioEditorModal()">✕</button>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-mono uppercase text-[#94a3b8] mb-1">Archive Header Title</label>
+<input class="w-full bg-[#10172a] border border-[#1e293b] rounded-lg px-3 py-2 text-sm text-[#f1f5f9] focus:outline-none focus:border-[#93c5fd]" id="edit-site-title" value="Anthems of Heart"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-[#94a3b8] mb-1">Author Subtitle</label>
+<input class="w-full bg-[#10172a] border border-[#1e293b] rounded-lg px-3 py-2 text-sm text-[#f1f5f9] focus:outline-none focus:border-[#93c5fd]" id="edit-author-sub" value="Poems, fragments &amp; observations by DivyaShree"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-[#94a3b8] mb-1">Curator Notes / Bio Paragraph</label>
+<textarea class="w-full bg-[#10172a] border border-[#1e293b] rounded-lg p-3 text-sm text-[#cbd5e1] focus:outline-none focus:border-[#93c5fd]" id="edit-bio-text" rows="3">Notes on memory, the architecture of silence, and private truths written at 3 AM. A repository of published essays and unpolished drafts.</textarea>
+</div>
+<div class="flex justify-end gap-2 pt-3 border-t border-[#1e293b]">
+<button class="px-3.5 py-1.5 text-xs font-mono text-[#94a3b8] hover:text-white" onclick="closeBioEditorModal()">Cancel</button>
+<button class="px-4 py-1.5 bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#0a0f1d] font-semibold text-xs font-mono rounded-lg" onclick="saveBioChanges()">Save Updates</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- AUTHOR ARCHIVE & VAULT MANAGER MODAL       -->
+<!-- ========================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#070b14]/85 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none" id="screen-vault-modal">
+<div class="relative w-full max-w-xl bg-[#0d1527] border border-[#253556] shadow-2xl p-6 rounded-xl text-[#e2e8f0]">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e293b] mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#93c5fd]">folder_zip</span>
+<div>
+<h3 class="text-base font-headline-sm text-[#f1f5f9] font-medium">Archive &amp; Draft Vault Manager</h3>
+<p class="text-xs text-[#94a3b8] font-mono">Total 6 drafts • 3 Public • 1 Encrypted</p>
+</div>
+</div>
+<button class="text-[#94a3b8] hover:text-[#f1f5f9]" onclick="closeVaultModal()">✕</button>
+</div>
+<div class="space-y-2.5 max-h-72 overflow-y-auto pr-1 font-mono text-xs">
+<div class="flex items-center justify-between p-2.5 rounded bg-[#10172a] border border-[#1e293b]">
+<div>
+<p class="text-[#f1f5f9] font-medium font-body-ui">On the Art of Disappearing</p>
+<span class="text-[#64748b]">Nov 14 • Public</span>
+</div>
+<button class="text-[#93c5fd] hover:underline" onclick="alert('Viewing revision history for Essay 01')">History (v3)</button>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-[#10172a] border border-[#1e293b]">
+<div>
+<p class="text-[#f1f5f9] font-medium font-body-ui">Blue Light &amp; Timestamps</p>
+<span class="text-[#64748b]">Oct 29 • Public</span>
+</div>
+<button class="text-[#93c5fd] hover:underline" onclick="alert('Viewing revision history for Essay 02')">History (v2)</button>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-[#10172a] border border-[#253556]">
+<div>
+<p class="text-[#f1f5f9] font-medium font-body-ui">For the ones who stayed in the dark</p>
+<span class="text-[#93c5fd]">Vault Draft #19 • Subscriber Encrypted</span>
+</div>
+<button class="text-[#93c5fd] hover:underline" onclick="closeVaultModal(); transitionToReader();">Open in Reader</button>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-[#10172a]/60 border border-dashed border-[#1e293b]">
+<div>
+<p class="text-[#94a3b8] font-medium font-body-ui">Untitled Fragment: Echoes in White Paint</p>
+<span class="text-[#64748b]">Unpublished Staging • 400 words</span>
+</div>
+<button class="text-[#cbd5e1] hover:underline" onclick="openComposerModal(); closeVaultModal();">Resume</button>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-[#1e293b] mt-4">
+<span class="text-[11px] font-mono text-[#64748b]">Encrypted via DivyaShree KeyRing</span>
+<button class="px-4 py-1.5 bg-[#1e293b] hover:bg-[#253556] text-[#e2e8f0] text-xs font-mono rounded" onclick="closeVaultModal()">Close Vault</button>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- SCREEN 2: VERIFICATION MODAL OVERLAY       -->
+<!-- ========================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#070b14]/80 backdrop-blur-md transition-all duration-300" id="screen-modal">
+<div class="relative w-full max-w-lg backdrop-blur-md bg-[#0d1527] border border-[#253556] shadow-2xl p-8 rounded-xl text-[#e2e8f0] overflow-hidden">
+<!-- Subtle Ambient Glow -->
+<div class="absolute -top-12 -left-12 w-44 h-44 bg-[#3b82f6]/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Normal Modal Body -->
+<div class="" id="modal-content-state"><div class="flex items-start justify-between mb-5"><div class="flex items-center gap-3"><div class="size-10 rounded-lg bg-[#10172a] border border-[#1e293b] flex items-center justify-center text-[#93c5fd]"><span class="material-symbols-outlined text-xl">key</span></div><div><h3 class="text-xl font-headline-sm text-[#f1f5f9] font-normal leading-tight">Encrypted Manuscript</h3><p class="text-xs text-[#94a3b8] font-mono mt-0.5">Author-Encrypted Archive • Protected Draft</p></div></div><button class="text-[#94a3b8] hover:text-[#f1f5f9] transition-colors p-1.5 rounded hover:bg-[#1e293b]" onclick="closeVerificationModal()"><svg class="size-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><div class="mb-4 p-2.5 rounded-lg bg-[#10172a] border border-[#253556] flex items-center gap-2 text-xs font-mono text-[#cbd5e1]"><span class="material-symbols-outlined text-sm text-[#93c5fd]">lock</span><span class="text-[#64748b]">Target:</span><span class="text-[#93c5fd] truncate font-medium">For the ones who stayed in the dark (Vault Draft #19)</span></div><p class="text-[#94a3b8] text-sm leading-relaxed mb-5 font-body-ui">This draft has been encrypted by the author with a custom keyphrase. Enter the designated password to decrypt and read this post.</p><form class="space-y-4 mb-2" onsubmit="event.preventDefault(); const val = document.getElementById('post-password-input').value; const err = document.getElementById('password-error-msg'); if (val.trim().toLowerCase() === 'nocturne' || val.trim().length &gt; 0) { if(err) err.classList.add('hidden'); handleConfirmSession(); } else { if(err) err.classList.remove('hidden'); }"><div><label class="block text-xs font-mono uppercase tracking-wider text-[#94a3b8] mb-1.5 flex items-center justify-between" for="post-password-input"><span class="flex items-center gap-1"><span class="text-[#93c5fd]">#</span> password:</span><span class="text-[11px] text-[#64748b] font-mono">(Hint: "nocturne")</span></label><div class="relative"><input autocomplete="current-password" autofocus="" class="w-full bg-[#10172a] border border-[#253556] focus:border-[#93c5fd] focus:ring-1 focus:ring-[#93c5fd]/50 rounded-lg px-3.5 py-2.5 text-sm text-[#f1f5f9] placeholder-[#475569] font-mono focus:outline-none transition-all" id="post-password-input" placeholder="Enter post password..." required="" type="password"/></div><p class="text-xs font-mono text-[#ffb4a8] mt-1.5 hidden flex items-center gap-1" id="password-error-msg"><span class="material-symbols-outlined text-xs">error</span> Incorrect password. Access denied.</p></div><div class="flex flex-col gap-2.5 pt-1"><button class="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-lg bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#0a0f1d] font-semibold text-sm transition-all shadow-[0_0_20px_rgba(147,197,253,0.2)] hover:shadow-[0_0_25px_rgba(147,197,253,0.35)] active:scale-[0.99] cursor-pointer border border-[#93c5fd]/60 font-mono" id="btn-confirm-session" type="submit"><span class="material-symbols-outlined text-base">lock_open</span><span>[ Decrypt &amp; Read Post ]</span></button><button class="w-full py-2 text-xs font-label-md uppercase tracking-wider text-[#94a3b8] hover:text-[#e2e8f0] transition-colors text-center font-mono" onclick="closeVerificationModal()" type="button">← Return to public essays</button></div></form></div>
+<!-- Loading State inside Modal -->
+<div class="py-8 flex flex-col items-center justify-center text-center hidden" id="modal-loading-state">
+<div class="size-10 border-2 border-[#1e293b] border-t-[#93c5fd] rounded-full animate-spin mb-4"></div>
+<p class="text-[#f1f5f9] font-medium text-sm mb-1 tracking-wide">Verifying secure session...</p>
+<p class="text-xs font-label-md text-[#94a3b8]">Generating ephemeral session token</p>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- SCREEN 3: FOCUS READER (RESTRICTED CONTENT) -->
+<!-- ========================================== -->
+<div class="min-h-screen w-full bg-[#0a0f1d] flex flex-col text-[#e2e8f0] hidden" id="screen-reader">
+<!-- Reader Top Sticky Bar (Minimal back-to-main exception) -->
+<header class="sticky top-0 z-40 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-[#1e293b] px-6 py-3.5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#f1f5f9] transition-colors py-1 px-2 -ml-2 rounded hover:bg-[#10172a]" onclick="transitionToLanding()">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+<span class="font-medium">Return to essays</span>
+</button>
+</div>
+<div class="flex items-center gap-4 font-label-md text-xs text-[#94a3b8]">
+<span class="hidden sm:inline">Archived Draft #19</span>
+<span class="hidden sm:inline">•</span>
+<span class="text-[#93c5fd]">12 min read</span>
+<div class="w-20 bg-[#162038] h-1 rounded-full overflow-hidden hidden md:block">
+<div class="bg-[#93c5fd] h-full w-[14%]" id="read-progress" style="width: 100%;"></div>
+</div>
+</div>
+</header>
+<!-- Reading Container -->
+<main class="flex-1 max-w-3xl mx-auto px-6 py-12 md:py-20 w-full">
+<!-- Article Meta Header -->
+<div class="border-b border-[#1e293b] pb-8 mb-12">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-label-md tracking-wider font-semibold uppercase bg-[#1e2b48] text-[#93c5fd] border border-[#2e406b]">
+            Verified Subscriber Access
+          </span>
+<span class="text-xs text-[#64748b] font-label-md">Written at 3:14 AM</span>
+</div>
+<h1 class="text-2xl md:text-4xl lg:text-[40px] font-headline-lg text-[#f1f5f9] font-normal leading-tight md:leading-[1.25] tracking-tight mb-4">
+          For the ones who stayed in the dark (Archived Drafts)
+        </h1>
+<p class="text-[#94a3b8] text-base md:text-lg font-body-reading italic">
+          On surviving public whispers, preserving one's inner sanctuary, and moving forward with deliberate grace.
+        </p>
+</div>
+<!-- Article Body -->
+<article class="text-[#e2e8f0] font-body-reading text-[17px] md:text-[18px] leading-[1.85] space-y-8 tracking-wide font-light">
+<p class="drop-cap">
+          There is a particular taxonomy to rumors. They do not arrive as thunder; they settle like dust over surfaces you believed were clean. For months, I treated silence as a deficiency, an omission that begged to be corrected. In modern discourse, if you do not step up to a podium within forty-eight hours, the court of public imagination constructs an effigy in your likeness and burns it for recreation.
+        </p>
+<p class="">
+          It took waking up at three in the morning in a city that sleeps with its windows open to understand that not every accusation merits an audience. When you give oxygen to speculation, you validate the premise that your private life belongs to the commons. It does not.
+        </p>
+<!-- Poetic Pull-Quote -->
+<blockquote class="my-10 border-l-2 border-[#93c5fd]/60 pl-6 py-2 text-xl md:text-2xl font-headline-md text-[#f1f5f9] italic">
+          "Dignity is rarely loud. It is the steady refusal to let strangers furnish the rooms of your own interior life."
+        </blockquote>
+<p class="">
+          We live under a regime of compulsory transparency. We are encouraged to confess, to broadcast our wounds while they are still bleeding, to convert genuine grief into algorithmic currency. But there is a sacred architecture to silence. The things you refuse to say out loud remain yours alone. They cannot be monetized, they cannot be clipped into thirty-second soundbites, and they cannot be distorted by someone who already decided what you were before you spoke.
+        </p>
+<p class="">
+          To start over is not to erase what happened. Starting over is simply sweeping the debris off the porch, shutting the door against the cold wind, and brewing tea for the people who actually sat with you in the dark without asking for a transcript.
+        </p>
+<p class="">
+          To anyone currently enduring their own quiet season of misinterpretation: let them speak. The truth does not hurry. It survives under the weight of noise, waiting patiently for the wind to change.
+        </p>
+<!-- Author sign-off -->
+<div class="pt-8 border-t border-[#1e293b] flex items-center justify-between">
+<div>
+<p class="text-sm font-headline-sm text-[#f1f5f9] font-normal">— DivyaShree</p>
+<p class="text-xs text-[#64748b] font-label-md">Bangalore, Karnataka</p>
+</div>
+<button class="px-4 py-2 rounded text-xs font-label-md uppercase tracking-wider text-[#cbd5e1] bg-[#10172a] hover:bg-[#1e293b] transition-colors border border-[#1e293b]" onclick="transitionToLanding()">
+            Finished Reading
+          </button>
+</div>
+</article>
+<!-- Reader Telemetry / Handshake Confirmation -->
+<div class="mt-20 pt-6 border-t border-dashed border-[#1e293b] flex items-center justify-between text-xs font-label-md text-[#64748b]">
+<div class="flex items-center gap-2">
+<span class="inline-block size-1.5 rounded-full bg-[#93c5fd]"></span>
+<span class="">Active session handshake successful. Reader telemetry logged.</span>
+</div>
+<span class="text-[#475569]">ID: sess_942_dshree</span>
+</div>
+</main>
+</div>
+<!-- Client-side State Machine Controller Script -->
+<script>
+    const landingEl = document.getElementById('screen-landing');
+    const modalEl = document.getElementById('screen-modal');
+    const modalContent = document.getElementById('modal-content-state');
+    const modalLoading = document.getElementById('modal-loading-state');
+    const readerEl = document.getElementById('screen-reader');
+
+    // Author System State
+    let isAuthorSessionActive = true;
+    let isInlineEditingMode = false;
+    let totalEntriesCount = 3;
+
+    function toggleAuthorDropdown(e) {
+      if (e) e.stopPropagation();
+      const menu = document.getElementById('author-dropdown-menu');
+      const btn = document.getElementById('author-avatar-btn');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    function closeAuthorDropdown() {
+      const menu = document.getElementById('author-dropdown-menu');
+      const btn = document.getElementById('author-avatar-btn');
+      if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function toggleAuthorEditMode() {
+      isInlineEditingMode = !isInlineEditingMode;
+      const banner = document.getElementById('editing-mode-banner');
+      const badge = document.getElementById('editmode-badge');
+      const slots = document.querySelectorAll('.author-edit-slot');
+
+      if (isInlineEditingMode) {
+        banner.classList.remove('hidden');
+        badge.textContent = 'ON';
+        badge.classList.remove('bg-[#162038]', 'text-[#94a3b8]');
+        badge.classList.add('bg-[#1e2b48]', 'text-[#93c5fd]', 'font-bold');
+        slots.forEach(el => el.classList.remove('hidden'));
+      } else {
+        banner.classList.add('hidden');
+        badge.textContent = 'OFF';
+        badge.classList.remove('bg-[#1e2b48]', 'text-[#93c5fd]', 'font-bold');
+        badge.classList.add('bg-[#162038]', 'text-[#94a3b8]');
+        slots.forEach(el => el.classList.add('hidden'));
+      }
+      closeAuthorDropdown();
+    }
+
+    function triggerQuickEdit(cardId, currentTitle, currentDesc) {
+      const newTitle = prompt('Edit essay title:', currentTitle);
+      if (newTitle !== null && newTitle.trim() !== '') {
+        const titleEl = document.getElementById('title-' + cardId);
+        if (titleEl) titleEl.innerText = newTitle;
+      }
+      const newDesc = prompt('Edit summary / lead:', currentDesc);
+      if (newDesc !== null && newDesc.trim() !== '') {
+        const descEl = document.getElementById('desc-' + cardId);
+        if (descEl) descEl.innerText = newDesc;
+      }
+    }
+
+    // Composer Modal controls
+    const composerModal = document.getElementById('screen-composer-modal');
+    function openComposerModal() {
+      closeAuthorDropdown();
+      composerModal.classList.remove('opacity-0', 'pointer-events-none');
+      composerModal.classList.add('opacity-100');
+    }
+    function closeComposerModal() {
+      composerModal.classList.add('opacity-0', 'pointer-events-none');
+      composerModal.classList.remove('opacity-100');
+    }
+
+    function handlePublishDraft(e) {
+      e.preventDefault();
+      const title = document.getElementById('composer-title-input').value;
+      const type = document.getElementById('composer-type-input').value;
+      const readtime = document.getElementById('composer-readtime-input').value || '4 min read';
+      const synopsis = document.getElementById('composer-synopsis-input').value;
+      const isRestricted = document.getElementById('composer-subscribers-only').checked;
+
+      totalEntriesCount += 1;
+      document.getElementById('entry-count-badge').textContent = totalEntriesCount + ' Entries Available';
+
+      // Insert new card to feed
+      const feedContainer = document.getElementById('essays-feed-container');
+      const newCard = document.createElement('article');
+      const newId = 'card-essay-' + totalEntriesCount;
+      newCard.id = newId;
+
+      if (isRestricted) {
+        newCard.className = "relative overflow-hidden border border-[#253556] bg-[#0d1527] hover:border-[#3b82f6]/60 transition-all rounded-lg p-6 cursor-pointer group shadow-xl shadow-[#050811]";
+        newCard.onclick = () => openVerificationModal();
+        newCard.innerHTML = `
+          <div class="flex items-center justify-between gap-4 mb-2.5">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[11px] font-label-md tracking-wider font-semibold uppercase bg-[#1e2b48] text-[#93c5fd] border border-[#2e406b]">Subscribers Only</span>
+              <span class="text-xs font-label-md uppercase tracking-wider text-[#64748b]">${type} • ${readtime}</span>
+            </div>
+            <span class="text-xs text-[#64748b] font-label-md">Just now</span>
+          </div>
+          <h4 id="title-${newId}" class="text-xl md:text-2xl font-headline-sm text-[#f1f5f9] font-normal group-hover:text-[#93c5fd] transition-colors mb-2 tracking-[-0.015em]">${title}</h4>
+          <p id="desc-${newId}" class="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-4">${synopsis}</p>
+          <div class="flex items-center justify-between pt-2 border-t border-[#1e293b]">
+            <span class="text-xs text-[#64748b] font-label-md">Estimated reading: ${readtime}</span>
+            <span class="text-xs font-medium text-[#93c5fd]">Unlock Archive →</span>
+          </div>
+        `;
+      } else {
+        newCard.className = "border border-[#1e293b] bg-[#10172a] hover:border-[#334155] hover:bg-[#141d33] transition-all rounded-lg p-6 group";
+        newCard.innerHTML = `
+          <div class="flex items-center justify-between gap-4 mb-2">
+            <span class="text-xs font-label-md uppercase tracking-wider text-[#64748b]">${type} • ${readtime}</span>
+            <span class="text-xs text-[#64748b] font-mono">Today</span>
+          </div>
+          <h4 id="title-${newId}" class="text-xl md:text-2xl font-headline-sm text-[#f1f5f9] font-normal group-hover:text-[#93c5fd] transition-colors mb-2 tracking-[-0.015em]">${title}</h4>
+          <p id="desc-${newId}" class="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-4">${synopsis}</p>
+          <div class="flex items-center justify-between">
+            <a class="inline-flex items-center gap-1.5 text-sm font-medium text-[#e2e8f0] hover:text-[#93c5fd] transition-colors" href="javascript:void(0)" onclick="alert('Viewing freshly published manuscript: ' + ${JSON.stringify(title)})">
+              <span>Read Essay</span>
+              <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <span class="text-xs font-mono text-[#93c5fd] bg-[#162038] px-2 py-0.5 rounded border border-[#1e293b]">New</span>
+          </div>
+        `;
+      }
+
+      feedContainer.prepend(newCard);
+      closeComposerModal();
+      document.getElementById('composer-form').reset();
+      newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Bio / Colophon Editor
+    const bioModal = document.getElementById('screen-bio-modal');
+    function openBioEditorModal() {
+      closeAuthorDropdown();
+      bioModal.classList.remove('opacity-0', 'pointer-events-none');
+      bioModal.classList.add('opacity-100');
+    }
+    function closeBioEditorModal() {
+      bioModal.classList.add('opacity-0', 'pointer-events-none');
+      bioModal.classList.remove('opacity-100');
+    }
+    function saveBioChanges() {
+      const newTitle = document.getElementById('edit-site-title').value;
+      const newSub = document.getElementById('edit-author-sub').value;
+      const newBio = document.getElementById('edit-bio-text').value;
+
+      if (newTitle) document.getElementById('header-site-title').innerText = newTitle;
+      if (newSub) document.getElementById('author-subtitle').innerText = newSub;
+      if (newBio) document.getElementById('author-bio-paragraph').innerText = newBio;
+      closeBioEditorModal();
+    }
+
+    // Vault Modal
+    const vaultModal = document.getElementById('screen-vault-modal');
+    function openVaultManager() {
+      closeAuthorDropdown();
+      vaultModal.classList.remove('opacity-0', 'pointer-events-none');
+      vaultModal.classList.add('opacity-100');
+    }
+    function closeVaultModal() {
+      vaultModal.classList.add('opacity-0', 'pointer-events-none');
+      vaultModal.classList.remove('opacity-100');
+    }
+
+    function toggleAuthorSessionStatus() {
+      isAuthorSessionActive = !isAuthorSessionActive;
+      alert(isAuthorSessionActive ? "Author session reactivated." : "Author session locked. Read-only view enabled.");
+      closeAuthorDropdown();
+    }
+
+    function handleRestrictedClick(e) {
+      if (isInlineEditingMode) return;
+      openVerificationModal();
+    }
+
+    // Existing Verification & Reader Flow
+    function openVerificationModal() {
+      modalEl.classList.remove('pointer-events-none');
+      modalEl.classList.remove('opacity-0');
+      modalEl.classList.add('opacity-100');
+      modalContent.classList.remove('hidden');
+      modalLoading.classList.add('hidden');
+    }
+
+    function closeVerificationModal() {
+      modalEl.classList.add('opacity-0');
+      modalEl.classList.add('pointer-events-none');
+      modalEl.classList.remove('opacity-100');
+    }
+
+    function handleConfirmSession() {
+      modalContent.classList.add('hidden');
+      modalLoading.classList.remove('hidden');
+
+      setTimeout(() => {
+        closeVerificationModal();
+        transitionToReader();
+      }, 1000);
+    }
+
+    function transitionToReader() {
+      landingEl.classList.add('hidden');
+      readerEl.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function transitionToLanding() {
+      readerEl.classList.add('hidden');
+      landingEl.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Global click listener to close author menu on outside click
+    document.addEventListener('click', (e) => {
+      const container = document.getElementById('author-menu-container');
+      if (container && !container.contains(e.target)) {
+        closeAuthorDropdown();
+      }
+    });
+
+    // Escape key listener for modal accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!modalEl.classList.contains('pointer-events-none')) closeVerificationModal();
+        if (!composerModal.classList.contains('pointer-events-none')) closeComposerModal();
+        if (!bioModal.classList.contains('pointer-events-none')) closeBioEditorModal();
+        if (!vaultModal.classList.contains('pointer-events-none')) closeVaultModal();
+        closeAuthorDropdown();
+      }
+    });
+
+    // Reading progress simulation
+    window.addEventListener('scroll', () => {
+      if (!readerEl.classList.contains('hidden')) {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0) {
+          const progress = Math.min(100, Math.max(10, (window.scrollY / totalHeight) * 100));
+          const bar = document.getElementById('read-progress');
+          if (bar) bar.style.width = progress + '%';
+        }
+      }
+    });
+  </script>
+</body></html>

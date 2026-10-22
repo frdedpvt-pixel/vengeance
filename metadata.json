@@ -1,0 +1,8 @@
+{
+  "name": "Anthems of Heart — DivyaShree",
+  "description": "Essays, fragments \u0026 observations by DivyaShree. A repository of published essays, personal archives, and protected drafts written at 3 AM.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
